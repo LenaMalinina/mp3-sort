@@ -37,6 +37,7 @@ if not os.path.exists(args.dst_dir):
         print('Выходная директория успешно создана')
 elif not os.access(args.dst_dir, os.W_OK):
     print('Не хватает прав для записи в выходную директорию')
+    exit()
 
 files = FSWrapper.listdir(args.src_dir)
 for file in files:
